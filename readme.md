@@ -1,5 +1,7 @@
 ## API reusable SMTP Email Example
 
+Send email from /api/email/send with method POST
+
 ```go
 {
     "from" : "notification.to.admin@labirin-hybrid.com",

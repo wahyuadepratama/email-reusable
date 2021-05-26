@@ -11,6 +11,7 @@ import (
 
 func main() {
 	router := gin.Default()
+	router.GET("/", Welcome)
 	router.POST("api/email/send", SendEmail)
 	router.Run(":8000")
 }
@@ -25,6 +26,13 @@ type DataEmail struct {
 	Port     int    `json:"port"`
 	Email    string `json:"email"`
 	Password string `json:"password"`
+}
+
+// Welcome page
+func Welcome(c *gin.Context) {
+	c.JSON(http.StatusOK, gin.H{
+		"message": fmt.Sprintf("Welcome, you can send email from /api/email/send"),
+	})
 }
 
 // SendEmail to send from smtp
