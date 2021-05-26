@@ -1,5 +1,6 @@
 ## API reusable SMTP Email Example
 
+```go
 {
     "from" : "notification.to.admin@labirin-hybrid.com",
     "to" : "anita.mailist@gmail.com",
@@ -10,3 +11,4 @@
     "email" : "notification.to.admin@labirin-hybrid.com",
     "password" : "write your password here"
 }
+```
